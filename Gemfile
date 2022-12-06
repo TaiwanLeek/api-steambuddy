@@ -75,3 +75,5 @@ group :production do
 end
 
 gem 'rdoc'
+
+gem 'debug'

@@ -6,25 +6,15 @@ module SteamBuddy
   module Service
     # Transaction to store player from Steam API to database
 
-    # Author: a0985
     class AddPlayer
       include Dry::Transaction
 
-      step :parse_id
       step :find_player
       step :store_player
 
       private
 
-      def parse_id(input)
-        if input.success?
-          # Try getting player from database
-          db_player = Repository::For.klass(Entity::Player).find_id(input[:remote_id])
-          Success(db_player_id: db_player&.remote_id, remote_id: input[:remote_id])
-        else
-          Failure("ID #{input.error.message.first}")
-        end
-      end
+      DB_ERR_MSG = 'Having trouble accessing the database'
 
       def find_player(input)
         player = player_from_database(input)
@@ -35,30 +25,24 @@ module SteamBuddy
         end
         Success(input)
       rescue StandardError => e
-        Failure(e.to_s)
+        Failure(Response::ApiResult.new(status: :not_found, message: e.to_s))
       end
 
       def store_player(input)
         player =
-          if input[:remote_player]
-            add_player_to_database(input)
+          if (new_player = input[:remote_player])
+            db_player = Repository::For.entity(new_player).find_or_create_with_friends(new_player)
+            Repository::Players.rebuild_entity_with_friends(db_player)
           else
             input[:local_player]
           end
-        Success(player)
+        Success(Response::ApiResult.new(status: :created, message: player))
       rescue StandardError => e
-        Logger.error e.backtrace.join("\n")
-        Failure('Having trouble accessing the database')
+        puts e.backtrace.join("\n")
+        Failure(Response::ApiResult.new(status: :internal_error, message: DB_ERR_MSG))
       end
 
       # Following are support methods that other services could use
-
-      def add_player_to_database(input)
-        # Add player to database
-        new_player = input[:remote_player]
-        Repository::For.entity(new_player).find_or_create_with_friends(new_player)
-        new_player
-      end
 
       def player_from_steam(input)
         # Get player from API
