@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
-require_relative 'helpers/spec_helper'
-require_relative '../require_app'
-require_app
+require_relative '../../helpers/spec_helper'
 
 describe 'Tests Steam API library' do
   VCR.configure do |c|

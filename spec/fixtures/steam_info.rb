@@ -2,7 +2,7 @@
 
 # Steam Web API Reference: https://steamcommunity.com/dev
 
-require_relative '../test_config'
+require_relative '../helpers/test_config_helper'
 
 require 'httparty'
 require 'json'
