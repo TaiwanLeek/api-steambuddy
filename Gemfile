@@ -8,7 +8,7 @@ gem 'figaro', '~> 1.2'
 gem 'rack-test' # for testing and can also be used to diagnose in production
 gem 'rake', '~> 13.0'
 
-# PRESENTATION LAYER
+# Presentation Layer
 gem 'multi_json', '~> 1.15'
 gem 'roar', '~> 1.1'
 
@@ -16,7 +16,6 @@ gem 'roar', '~> 1.1'
 gem 'puma', '~> 6'
 gem 'rack-session', '~> 0.3'
 gem 'roda', '~> 3'
-gem 'slim', '~> 4'
 
 ## Networking
 gem 'httparty'
@@ -44,7 +43,7 @@ group :development, :test do
   gem 'sqlite3', '~> 1.4'
 end
 
-## TESTING
+# TESTING
 group :test do
   gem 'minitest', '~> 5'
   gem 'minitest-rg', '~> 5'
@@ -62,18 +61,19 @@ end
 # DEBUGGING
 gem 'pry'
 
-## QUALITY
+# QUALITY
 group :development do
   gem 'flog'
   gem 'reek'
   gem 'rubocop'
 end
 
-## Database
+# Database
 group :production do
   gem 'pg'
 end
 
+# Documentation
 gem 'rdoc'
 
-gem 'debug'
+gem "rack", "~> 3.0"

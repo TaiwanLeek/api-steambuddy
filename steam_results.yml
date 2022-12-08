@@ -1911,7 +1911,7 @@ owned:
       playtime_linux_forever: 0
       rtime_last_played: 1601365566
     - appid: 552500
-      playtime_2weeks: 2820
+      playtime_2weeks: 2665
       playtime_forever: 4115
       playtime_windows_forever: 4083
       playtime_mac_forever: 0

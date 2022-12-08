@@ -11,9 +11,6 @@ GEM
     data_magic (1.2)
       faker (>= 1.1.2)
       yml_reader (>= 0.6)
-    debug (1.7.0)
-      irb (>= 1.5.0)
-      reline (>= 0.3.1)
     declarative (0.0.20)
     docile (1.4.0)
     domain_name (0.5.20190701)
@@ -100,9 +97,6 @@ GEM
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     ice_nine (0.11.2)
-    io-console (0.5.11)
-    irb (1.5.1)
-      reline (>= 0.3.0)
     kwalify (0.7.2)
     listen (3.7.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
@@ -154,8 +148,6 @@ GEM
       parser (~> 3.1.0)
       rainbow (>= 2.0, < 4.0)
     regexp_parser (2.6.1)
-    reline (0.3.1)
-      io-console (~> 0.5)
     representable (3.2.0)
       declarative (< 0.1.0)
       trailblazer-option (>= 0.1.1, < 0.2.0)
@@ -184,14 +176,9 @@ GEM
       simplecov_json_formatter (~> 0.1)
     simplecov-html (0.12.3)
     simplecov_json_formatter (0.1.4)
-    slim (4.1.0)
-      temple (>= 0.7.6, < 0.9)
-      tilt (>= 2.0.6, < 2.1)
     sqlite3 (1.5.4-x86_64-linux)
     stringio (3.0.2)
-    temple (0.8.2)
     thor (1.2.1)
-    tilt (2.0.11)
     trailblazer-option (0.1.2)
     uber (0.1.0)
     unf (0.1.4)
@@ -214,7 +201,6 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  debug
   dry-monads (~> 1.4)
   dry-struct (~> 1)
   dry-transaction (~> 0.13)
@@ -233,6 +219,7 @@ DEPENDENCIES
   pg
   pry
   puma (~> 6)
+  rack (~> 3.0)
   rack-session (~> 0.3)
   rack-test
   rake (~> 13.0)
@@ -244,7 +231,6 @@ DEPENDENCIES
   rubocop
   sequel (~> 5.49)
   simplecov (~> 0)
-  slim (~> 4)
   sqlite3 (~> 1.4)
   vcr (~> 6)
   webmock (~> 3)
