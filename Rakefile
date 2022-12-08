@@ -21,7 +21,7 @@ end
 desc 'run tests'
 task :spec do
   sh 'ruby spec/fixtures/steam_info.rb'
-  sh 'ruby spec/gateway_steam_spec.rb'
+  sh 'ruby spec/tests/integration/gateway_steam_spec.rb'
 end
 
 desc 'Run application console'
