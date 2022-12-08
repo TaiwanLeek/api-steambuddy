@@ -3,6 +3,7 @@
 require 'rake/testtask'
 
 CODE = 'lib/'
+API_PORT = '9090'
 
 task :default do
   puts `rake -T`
@@ -10,11 +11,11 @@ end
 
 desc 'run service'
 task :run do
-  sh 'bundle exec puma'
+  sh "bundle exec puma -p #{API_PORT}"
 end
 
 task :rerun do
-  sh "rerun -c --ignore 'coverage/*' -- bundle exec puma"
+  sh "rerun -c --ignore 'coverage/*' -- bundle exec puma -p #{API_PORT}"
 end
 
 desc 'run tests'
