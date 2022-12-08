@@ -1,12 +1,13 @@
 # frozen_string_literal: true
 
 require 'roda'
-require 'slim'
-require 'slim/include'
 
 module SteamBuddy
   # Web App
   class App < Roda
+    plugin :halt
+    plugin :all_verbs
+
     route do |routing|
       response['Content-Type'] = 'application/json'
 
@@ -28,6 +29,7 @@ module SteamBuddy
             routing.on String do |remote_id|
               # GET /players/{remote_id}/
               routing.get do
+                'Under construction!'
               end
 
               # POST /players/{remote_id}
