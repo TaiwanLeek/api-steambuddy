@@ -3,17 +3,13 @@
 require 'roar/decorator'
 require 'roar/json'
 
-require_relative 'game_representer'
-
 module SteamBuddy
   module Representer
-    class Player < Roar::Decorator
+    class Game < Roar::Decorator
       include Roar::JSON
 
       property :remote_id
-      property :username
-      property :game_count
-      property :owned_games, extend: Representer::Game
+      property :name
     end
   end
 end

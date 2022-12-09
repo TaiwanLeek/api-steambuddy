@@ -11,6 +11,9 @@ GEM
     data_magic (1.2)
       faker (>= 1.1.2)
       yml_reader (>= 0.6)
+    debug (1.7.0)
+      irb (>= 1.5.0)
+      reline (>= 0.3.1)
     declarative (0.0.20)
     docile (1.4.0)
     domain_name (0.5.20190701)
@@ -94,6 +97,9 @@ GEM
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     ice_nine (0.11.2)
+    io-console (0.5.11)
+    irb (1.6.0)
+      reline (>= 0.3.0)
     json (2.6.3)
     kwalify (0.7.2)
     listen (3.7.1)
@@ -143,6 +149,8 @@ GEM
       parser (~> 3.1.0)
       rainbow (>= 2.0, < 4.0)
     regexp_parser (2.6.1)
+    reline (0.3.1)
+      io-console (~> 0.5)
     representable (3.2.0)
       declarative (< 0.1.0)
       trailblazer-option (>= 0.1.1, < 0.2.0)
@@ -206,6 +214,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  debug (~> 1.7)
   dry-monads (~> 1.4)
   dry-struct (~> 1)
   dry-transaction (~> 0.13)

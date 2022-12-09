@@ -54,7 +54,7 @@ module SteamBuddy
       end
 
       def player_from_database(input)
-        Repository::For.klass(Entity::Player).find_id(input[:db_player_id])
+        Repository::For.klass(Entity::Player).find_id(input[:remote_id])
       end
     end
   end
