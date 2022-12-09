@@ -21,8 +21,7 @@ gem 'roda', '~> 3'
 gem 'httparty'
 
 ## Database
-gem 'hirb', '~> 0'
-gem 'hirb-unicode', '~> 0'
+gem 'hirb', '~> 0.7.3'
 gem 'sequel', '~> 5.49'
 
 # Controllers and services
@@ -43,7 +42,6 @@ group :development, :test do
   gem 'sqlite3', '~> 1.4'
 end
 
-# TESTING
 group :test do
   gem 'minitest', '~> 5'
   gem 'minitest-rg', '~> 5'
@@ -58,14 +56,14 @@ group :development do
   gem 'rerun', '~> 0'
 end
 
-# DEBUGGING
+# Debugging
 gem 'pry'
 
-# QUALITY
+# Quaility
 group :development do
   gem 'flog'
   gem 'reek'
-  gem 'rubocop'
+  gem 'rubocop', '~> 1.40'
 end
 
 # Database
@@ -73,7 +71,4 @@ group :production do
   gem 'pg'
 end
 
-# Documentation
-gem 'rdoc'
-
-gem "rack", "~> 3.0"
+gem 'rack', '~> 3.0'
