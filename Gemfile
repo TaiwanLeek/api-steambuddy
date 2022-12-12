@@ -74,3 +74,7 @@ end
 gem 'rack', '~> 3.0'
 
 gem 'debug', '~> 1.7'
+
+gem 'concurrent-ruby', '~> 1.1'
+
+gem 'benchmark', '~> 0.2.1'
