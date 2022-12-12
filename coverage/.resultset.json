@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/pride829/Git/steambuddy/steambuddy-ultimate-api/require_app.rb": {
+      "/home/pride829/Git/steambuddy/api-steambuddy/require_app.rb": {
         "lines": [
           null,
           null,
@@ -11,12 +11,12 @@
           1,
           null,
           1,
-          22,
+          26,
           null,
           null
         ]
       },
-      "/home/pride829/Git/steambuddy/steambuddy-ultimate-api/config/environment.rb": {
+      "/home/pride829/Git/steambuddy/api-steambuddy/config/environment.rb": {
         "lines": [
           null,
           null,
@@ -61,7 +61,7 @@
           null
         ]
       },
-      "/home/pride829/Git/steambuddy/steambuddy-ultimate-api/app/infrastructure/database/game_orm.rb": {
+      "/home/pride829/Git/steambuddy/api-steambuddy/app/infrastructure/database/game_orm.rb": {
         "lines": [
           null,
           null,
@@ -77,7 +77,7 @@
           null
         ]
       },
-      "/home/pride829/Git/steambuddy/steambuddy-ultimate-api/app/infrastructure/database/owned_game_orm.rb": {
+      "/home/pride829/Git/steambuddy/api-steambuddy/app/infrastructure/database/owned_game_orm.rb": {
         "lines": [
           null,
           null,
@@ -98,7 +98,7 @@
           null
         ]
       },
-      "/home/pride829/Git/steambuddy/steambuddy-ultimate-api/app/infrastructure/database/player_orm.rb": {
+      "/home/pride829/Git/steambuddy/api-steambuddy/app/infrastructure/database/player_orm.rb": {
         "lines": [
           null,
           null,
@@ -127,7 +127,7 @@
           null
         ]
       },
-      "/home/pride829/Git/steambuddy/steambuddy-ultimate-api/app/infrastructure/gateways/steam_api.rb": {
+      "/home/pride829/Git/steambuddy/api-steambuddy/app/infrastructure/gateways/steam_api.rb": {
         "lines": [
           null,
           null,
@@ -227,7 +227,7 @@
           null
         ]
       },
-      "/home/pride829/Git/steambuddy/steambuddy-ultimate-api/app/domain/init.rb": {
+      "/home/pride829/Git/steambuddy/api-steambuddy/app/domain/init.rb": {
         "lines": [
           null,
           null,
@@ -239,7 +239,7 @@
           null
         ]
       },
-      "/home/pride829/Git/steambuddy/steambuddy-ultimate-api/app/domain/models/entities/game.rb": {
+      "/home/pride829/Git/steambuddy/api-steambuddy/app/domain/models/entities/game.rb": {
         "lines": [
           null,
           null,
@@ -263,7 +263,7 @@
           null
         ]
       },
-      "/home/pride829/Git/steambuddy/steambuddy-ultimate-api/app/domain/models/entities/owned_game.rb": {
+      "/home/pride829/Git/steambuddy/api-steambuddy/app/domain/models/entities/owned_game.rb": {
         "lines": [
           null,
           null,
@@ -289,7 +289,7 @@
           null
         ]
       },
-      "/home/pride829/Git/steambuddy/steambuddy-ultimate-api/app/domain/models/entities/player.rb": {
+      "/home/pride829/Git/steambuddy/api-steambuddy/app/domain/models/entities/player.rb": {
         "lines": [
           null,
           null,
@@ -327,7 +327,7 @@
           null
         ]
       },
-      "/home/pride829/Git/steambuddy/steambuddy-ultimate-api/app/domain/models/mappers/played_game_mapper.rb": {
+      "/home/pride829/Git/steambuddy/api-steambuddy/app/domain/models/mappers/played_game_mapper.rb": {
         "lines": [
           null,
           null,
@@ -386,7 +386,7 @@
           null
         ]
       },
-      "/home/pride829/Git/steambuddy/steambuddy-ultimate-api/app/domain/models/mappers/player_mapper.rb": {
+      "/home/pride829/Git/steambuddy/api-steambuddy/app/domain/models/mappers/player_mapper.rb": {
         "lines": [
           null,
           null,
@@ -492,7 +492,7 @@
           null
         ]
       },
-      "/home/pride829/Git/steambuddy/steambuddy-ultimate-api/app/domain/models/repositories/for.rb": {
+      "/home/pride829/Git/steambuddy/api-steambuddy/app/domain/models/repositories/for.rb": {
         "lines": [
           null,
           null,
@@ -520,7 +520,7 @@
           null
         ]
       },
-      "/home/pride829/Git/steambuddy/steambuddy-ultimate-api/app/domain/models/repositories/players.rb": {
+      "/home/pride829/Git/steambuddy/api-steambuddy/app/domain/models/repositories/players.rb": {
         "lines": [
           null,
           null,
@@ -622,7 +622,7 @@
           null
         ]
       },
-      "/home/pride829/Git/steambuddy/steambuddy-ultimate-api/app/domain/models/repositories/owned_games.rb": {
+      "/home/pride829/Git/steambuddy/api-steambuddy/app/domain/models/repositories/owned_games.rb": {
         "lines": [
           null,
           null,
@@ -651,7 +651,26 @@
           null
         ]
       },
-      "/home/pride829/Git/steambuddy/steambuddy-ultimate-api/app/presentation/representers/http_response_representer.rb": {
+      "/home/pride829/Git/steambuddy/api-steambuddy/app/presentation/representers/game_representer.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/pride829/Git/steambuddy/api-steambuddy/app/presentation/representers/http_response_representer.rb": {
         "lines": [
           null,
           null,
@@ -689,7 +708,7 @@
           null
         ]
       },
-      "/home/pride829/Git/steambuddy/steambuddy-ultimate-api/app/presentation/representers/player_representer.rb": {
+      "/home/pride829/Git/steambuddy/api-steambuddy/app/presentation/representers/owned_game_representer.rb": {
         "lines": [
           null,
           null,
@@ -697,10 +716,35 @@
           1,
           null,
           1,
+          null,
+          1,
           1,
           1,
           1,
           null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/pride829/Git/steambuddy/api-steambuddy/app/presentation/representers/player_representer.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
           1,
           1,
           1,
@@ -710,7 +754,27 @@
           null
         ]
       },
-      "/home/pride829/Git/steambuddy/steambuddy-ultimate-api/app/presentation/responses/api_result.rb": {
+      "/home/pride829/Git/steambuddy/api-steambuddy/app/presentation/representers/players_representer.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/pride829/Git/steambuddy/api-steambuddy/app/presentation/responses/api_result.rb": {
         "lines": [
           null,
           null,
@@ -737,7 +801,19 @@
           null
         ]
       },
-      "/home/pride829/Git/steambuddy/steambuddy-ultimate-api/app/application/controllers/app.rb": {
+      "/home/pride829/Git/steambuddy/api-steambuddy/app/presentation/responses/players_list.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/pride829/Git/steambuddy/api-steambuddy/app/application/controllers/app.rb": {
         "lines": [
           null,
           null,
@@ -767,12 +843,6 @@
           0,
           0,
           0,
-          0,
-          null,
-          0,
-          0,
-          null,
-          null,
           null,
           0,
           0,
@@ -786,6 +856,22 @@
           0,
           0,
           null,
+          null,
+          null,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          0,
           null,
           null,
           null,
@@ -795,77 +881,37 @@
           null
         ]
       },
-      "/home/pride829/Git/steambuddy/steambuddy-ultimate-api/app/application/requests/player_request.rb": {
+      "/home/pride829/Git/steambuddy/api-steambuddy/app/application/requests/player_list.rb": {
         "lines": [
           null,
           null,
           1,
           1,
           1,
-          1,
-          0,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/home/pride829/Git/steambuddy/steambuddy-ultimate-api/app/application/services/add_player.rb": {
-        "lines": [
-          null,
-          null,
-          1,
           null,
           1,
           1,
-          null,
-          null,
           1,
           1,
           null,
           1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          0,
-          null,
           0,
           null,
           null,
           1,
-          null,
-          0,
-          0,
           0,
           null,
-          0,
+          null,
           null,
           0,
           null,
-          0,
-          0,
+          null,
+          null,
           null,
           null,
           null,
           null,
           1,
-          null,
-          0,
-          null,
-          null,
-          null,
           0,
           null,
           null,
@@ -877,7 +923,72 @@
           null
         ]
       },
-      "/home/pride829/Git/steambuddy/steambuddy-ultimate-api/app/application/services/get_table.rb": {
+      "/home/pride829/Git/steambuddy/api-steambuddy/app/application/services/add_player.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null,
+          1,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          0,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/pride829/Git/steambuddy/api-steambuddy/app/application/services/get_table.rb": {
         "lines": [
           null,
           null,
@@ -929,7 +1040,7 @@
           null
         ]
       },
-      "/home/pride829/Git/steambuddy/steambuddy-ultimate-api/app/application/services/list_players.rb": {
+      "/home/pride829/Git/steambuddy/api-steambuddy/app/application/services/list_players.rb": {
         "lines": [
           null,
           null,
@@ -938,21 +1049,20 @@
           1,
           1,
           null,
-          null,
-          null,
           1,
           1,
           null,
-          null,
-          null,
-          null,
+          1,
           null,
           1,
+          0,
+          0,
+          0,
           0,
           null,
           0,
           null,
-          0,
+          null,
           null,
           null,
           null,
@@ -960,7 +1070,7 @@
         ]
       }
     },
-    "timestamp": 1670582912
+    "timestamp": 1670817984
   },
   "Minitest": {
     "coverage": {
