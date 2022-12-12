@@ -6,6 +6,10 @@ Application that allows Steam *player* to compare their *games* and *play time* 
 
 SteamBuddy pulls data from Steam's API, and make list out of your *favorite owned game*. It will generate *reports* to compare the total play time, favorite games of you and your friends on Steam.
 
+## Supported environment
+x86_64-linux
+x86_64-darwin-19
+
 ## TODO:
 
 ### This weak

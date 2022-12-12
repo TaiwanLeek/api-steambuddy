@@ -3,24 +3,22 @@
 require 'rake/testtask'
 
 CODE = 'lib/'
+APP_PORT = '9000'
+API_PORT = '9090'
 
 task :default do
   puts `rake -T`
 end
 
-desc 'run service'
+desc 'Run unit and integration tests'
+Rake::TestTask.new(:spec) do |t|
+  t.pattern = 'spec/tests/**/*_spec.rb'
+  t.warning = false
+end
+
+desc 'Run service'
 task :run do
-  sh 'bundle exec puma'
-end
-
-task :rerun do
-  sh "rerun -c --ignore 'coverage/*' -- bundle exec puma"
-end
-
-desc 'run tests'
-task :spec do
-  sh 'ruby spec/fixtures/steam_info.rb'
-  sh 'ruby spec/gateway_steam_spec.rb'
+  sh "bundle exec puma -p #{API_PORT}"
 end
 
 desc 'Run application console'
@@ -45,14 +43,14 @@ namespace :db do
   end
 
   desc 'Run migrations'
-  task :migrate => :config do
+  task migrate: :config do
     Sequel.extension :migration
     puts "Migrating #{app.environment} database to latest"
     Sequel::Migrator.run(app.DB, 'db/migrations')
   end
 
   desc 'Delete dev or test database file (set correct RACK_ENV)'
-  task :drop => :config do
+  task drop: :config do
     if app.environment == :production
       puts 'Do not damage production database!'
       return

@@ -1,12 +1,13 @@
 # frozen_string_literal: true
 
 require 'roda'
-require 'slim'
-require 'slim/include'
 
 module SteamBuddy
   # Web App
   class App < Roda
+    plugin :halt
+    plugin :all_verbs
+
     route do |routing|
       response['Content-Type'] = 'application/json'
 
@@ -22,13 +23,38 @@ module SteamBuddy
         result_response.to_json
       end
 
-      routing.on 'api' do
-        routing.on 'v1' do
-          routing.on 'players' do
-            routing.on String do |_player_id|
-              # GET /players/{player_id}/
-              routing.get do
+      routing.on 'api/v1' do
+        routing.on 'players' do
+          routing.on String do |remote_id|
+            # GET /players/{remote_id}/
+            routing.get do
+              result = Service::AddPlayer.new.call(remote_id:)
+
+              if result.failure?
+                failed = Representer::HttpResponse.new(result.failure)
+                routing.halt failed.http_status_code, failed.to_json
               end
+
+              http_response = Representer::HttpResponse.new(result.value!)
+              response.status = http_response.http_status_code
+              Representer::Player.new(result.value!.message).to_json
+            end
+          end
+
+          routing.is do
+            # GET /players?list={base64_json_array_of_players_remote_id}
+            routing.get do
+              ## TODO: Should return only tracked player rather than all players
+              result = Service::ListPlayers.new.call
+
+              if result.failure?
+                failed = Representer::HttpResponse.new(result.failure)
+                routing.halt failed.http_status_code, failed.to_json
+              end
+
+              http_response = Representer::HttpResponse.new(result.value!)
+              response.status = http_response.http_status_code
+              Representer::PlayersList.new(result.value!.message).to_json
             end
           end
         end

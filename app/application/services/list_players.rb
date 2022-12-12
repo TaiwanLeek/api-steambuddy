@@ -5,21 +5,20 @@ require 'dry/monads'
 module SteamBuddy
   module Service
     # Retrieves array of all listed player entities
-
-    # Author: a0985
     class ListPlayers
-      include Dry::Monads::Result::Mixin
+      include Dry::Transaction
 
-      ##
-      # Get all players from database
-      # Author: a0985
-      # @return [Array<Entity::Player>]
-      def call
-        players = Repository::For.klass(Entity::Player).all
+      step :retrieve_all_players
 
-        Success(players)
+      def retrieve_all_players
+        Repository::For.klass(Entity::Player).all
+                       .then { |players| Response::PlayersList.new(players) }
+                       .then { |list| Response::ApiResult.new(status: :ok, message: list) }
+                       .then { |result| Success(result) }
       rescue StandardError
-        Failure('Having trouble accessing the database')
+        Failure(
+          Response::ApiResult.new(status: :internal_error, message: DB_ERR)
+        )
       end
     end
   end
