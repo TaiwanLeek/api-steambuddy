@@ -26,19 +26,39 @@ describe 'Test API routes' do
       SteamBuddy.Service.AddPlayer.new.call(remote_id: STEAMID)
 
       list = ["#{STEAMID}"]
-      encoded_list = CodePraise::Request::EncodedProjectList.to_encoded(list)
+      encoded_list = SteamBuddy::Request::EncodedPlayersList.to_encoded(list)
 
-      get "/api/v1/projects?list=#{encoded_list}"
+      get "/api/v1/players?list=#{encoded_list}"
       _(last_response.status).must_equal 200
 
-      # TODO
       response = JSON.parse(last_response.body)
-      projects = response['projects']
-      _(projects.count).must_equal 1
-      project = projects.first
-      _(project['name']).must_equal PROJECT_NAME
-      _(project['owner']['username']).must_equal USERNAME
-      _(project['contributors'].count).must_equal 3
+      players = response['players']
+      _(players.count).must_equal 1
+      player = players.first
+      _(player['remote_id']).must_equal STEAMID
+      _(player['username']).must_equal 'Cherise'
+      _(player['game_count'].count).must_equal 33
+    end
+
+    it 'should return empty lists if none found' do
+      list = ['djsafildafs;d/239eidj-fdjs']
+      encoded_list = SteamBuddy::Request::EncodedPlayersList.to_encoded(list)
+
+      get "/api/v1/players?list=#{encoded_list}"
+      _(last_response.status).must_equal 200
+
+      response = JSON.parse(last_response.body)
+      players = response['players']
+      _(players).must_be_kind_of Array
+      _(players.count).must_equal 0
+    end
+
+    it 'should return error if not list provided' do
+      get '/api/v1/players'
+      _(last_response.status).must_equal 400
+
+      response = JSON.parse(last_response.body)
+      _(response['message']).must_include 'list'
     end
   end
 end
