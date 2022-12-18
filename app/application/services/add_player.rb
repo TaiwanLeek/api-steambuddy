@@ -5,7 +5,6 @@ require 'dry/transaction'
 module SteamBuddy
   module Service
     # Transaction to store player from Steam API to database
-
     class AddPlayer
       include Dry::Transaction
 
@@ -16,6 +15,7 @@ module SteamBuddy
 
       DB_ERR_MSG = 'Having trouble accessing the database'
 
+      # Expects input[:remote_id]
       def find_player(input)
         player = player_from_database(input)
         if player&.full_friend_data

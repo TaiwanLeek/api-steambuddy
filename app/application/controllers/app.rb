@@ -45,7 +45,9 @@ module SteamBuddy
             # GET /players?list={base64_json_array_of_players_remote_id}
             routing.get do
               ## TODO: Should return only tracked player rather than all players
-              result = Service::ListPlayers.new.call
+              # puts routing.params {"list"=>"{WyI3NjU2MTE5ODAxMjA3ODIwMCJd}"}
+              list_req = Request::EncodedPlayersList.new(routing.params)
+              result = Service::ListPlayers.new.call(list_request: list_req)
 
               if result.failure?
                 failed = Representer::HttpResponse.new(result.failure)
