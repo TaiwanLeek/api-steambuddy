@@ -28,10 +28,6 @@ module SteamBuddy
           routing.on String do |remote_id|
             # GET /players/{remote_id}/
             routing.get do
-              App.configure :production do
-                response.cache_control public: true, max_age: 300
-              end
-
               result = Service::AddPlayer.new.call(remote_id:)
 
               if result.failure?
