@@ -28,6 +28,24 @@ module SteamBuddy
           routing.on String do |remote_id|
             # GET /players/{remote_id}/
             routing.get do
+              App.configure :production do
+                response.cache_control public: true, max_age: 300
+              end
+
+              result = Service::AddPlayer.new.call(remote_id:)
+
+              if result.failure?
+                failed = Representer::HttpResponse.new(result.failure)
+                routing.halt failed.http_status_code, failed.to_json
+              end
+
+              http_response = Representer::HttpResponse.new(result.value!)
+              response.status = http_response.http_status_code
+              Representer::Player.new(result.value!.message).to_json
+            end
+
+            # POST /players/{remote_id}/
+            routing.post do
               result = Service::AddPlayer.new.call(remote_id:)
 
               if result.failure?
