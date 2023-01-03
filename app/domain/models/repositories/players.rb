@@ -23,6 +23,12 @@ module SteamBuddy
         end
       end
 
+      def self.find_full_id(full_id)
+        full_id.map do |remote_id|
+          find_id(remote_id)
+        end.compact
+      end
+
       def self.rebuild_entity_with_friends(db_player)
         return unless db_player
 

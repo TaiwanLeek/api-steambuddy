@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'rake/testtask'
+require_relative 'require_app'
 
 CODE = 'lib/'
 APP_PORT = '9000'
@@ -16,9 +17,31 @@ Rake::TestTask.new(:spec) do |t|
   t.warning = false
 end
 
+desc 'Keep rerunning unit/integration tests upon changes'
+task :respec do
+  sh "rerun -c 'rake spec' --ignore 'coverage/*' --ignore 'repostore/*'"
+end
+
+desc 'Run the webserver and application and restart if code changes'
+task :rerun do
+  sh "rerun -c --ignore 'coverage/*' --ignore 'repostore/*' -- bundle exec puma"
+end
+
 desc 'Run service'
 task :run do
   sh "bundle exec puma -p #{API_PORT}"
+end
+
+namespace :run do
+  desc 'Run API in dev mode'
+  task :dev do
+    sh "bundle exec puma -p #{API_PORT}"
+  end
+
+  desc 'Run API in test mode'
+  task :test do
+    sh "RACK_ENV=test bundle exec puma -p #{API_PORT}"
+  end
 end
 
 desc 'Run application console'

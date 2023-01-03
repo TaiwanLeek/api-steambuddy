@@ -1,0 +1,685 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.steampowered.com/ISteamUser/GetFriendList/v1?key=<STEAM_KEY>&steamid=<STEAM_ID>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      Expires:
+      - Tue, 20 Dec 2022 09:38:01 GMT
+      Date:
+      - Tue, 20 Dec 2022 09:38:01 GMT
+      Content-Length:
+      - '357'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"friendslist":{"friends":[{"steamid":"76561198274628186","relationship":"friend","friend_since":1627222081},{"steamid":"76561198376062883","relationship":"friend","friend_since":1625925174},{"steamid":"76561198383470383","relationship":"friend","friend_since":1646406466},{"steamid":"76561199180185538","relationship":"friend","friend_since":1623665393}]}}'
+  recorded_at: Tue, 20 Dec 2022 09:38:01 GMT
+- request:
+    method: get
+    uri: http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v2?key=<STEAM_KEY>&steamids=<STEAM_ID>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      Expires:
+      - Tue, 20 Dec 2022 09:38:01 GMT
+      Date:
+      - Tue, 20 Dec 2022 09:38:01 GMT
+      Content-Length:
+      - '683'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"response":{"players":[{"steamid":"<STEAM_ID>","communityvisibilitystate":3,"profilestate":1,"personaname":"Cherise","profileurl":"https://steamcommunity.com/profiles/<STEAM_ID>/","avatar":"https://avatars.akamai.steamstatic.com/bfb337605c9fec8dee39bb2c2a230f8a25c91396.jpg","avatarmedium":"https://avatars.akamai.steamstatic.com/bfb337605c9fec8dee39bb2c2a230f8a25c91396_medium.jpg","avatarfull":"https://avatars.akamai.steamstatic.com/bfb337605c9fec8dee39bb2c2a230f8a25c91396_full.jpg","avatarhash":"bfb337605c9fec8dee39bb2c2a230f8a25c91396","personastate":0,"realname":"YU
+        TING","primaryclanid":"103582791429521408","timecreated":1472364901,"personastateflags":0}]}}'
+  recorded_at: Tue, 20 Dec 2022 09:38:01 GMT
+- request:
+    method: get
+    uri: http://api.steampowered.com/IPlayerService/GetOwnedGames/v1?key=<STEAM_KEY>&steamid=<STEAM_ID>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Eresult:
+      - '1'
+      Vary:
+      - Accept-Encoding
+      Expires:
+      - Tue, 20 Dec 2022 09:38:02 GMT
+      Date:
+      - Tue, 20 Dec 2022 09:38:02 GMT
+      Content-Length:
+      - '4984'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"response":{"game_count":33,"games":[{"appid":239030,"playtime_forever":0,"playtime_windows_forever":0,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":0},{"appid":271590,"playtime_forever":216,"playtime_windows_forever":216,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1631371775},{"appid":238320,"playtime_forever":80,"playtime_windows_forever":80,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1631979081},{"appid":381210,"playtime_forever":210,"playtime_windows_forever":206,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1623680773},{"appid":391540,"playtime_forever":0,"playtime_windows_forever":0,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":0},{"appid":400630,"playtime_forever":0,"playtime_windows_forever":0,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":0},{"appid":280790,"playtime_forever":48,"playtime_windows_forever":0,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1472401395},{"appid":414700,"playtime_forever":0,"playtime_windows_forever":0,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":0},{"appid":440880,"playtime_forever":0,"playtime_windows_forever":0,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":0},{"appid":477160,"playtime_2weeks":53,"playtime_forever":109,"playtime_windows_forever":109,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1670601781},{"appid":535930,"playtime_forever":537,"playtime_windows_forever":537,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1623917441},{"appid":597760,"playtime_forever":0,"playtime_windows_forever":0,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":0},{"appid":613100,"playtime_forever":342,"playtime_windows_forever":342,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1662907555},{"appid":424840,"playtime_forever":377,"playtime_windows_forever":377,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1622465519},{"appid":658850,"playtime_forever":0,"playtime_windows_forever":0,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":0},{"appid":665300,"playtime_forever":48,"playtime_windows_forever":48,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1628078573},{"appid":690530,"playtime_forever":146,"playtime_windows_forever":0,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1531454848},{"appid":240720,"playtime_forever":200,"playtime_windows_forever":200,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1631370335},{"appid":736190,"playtime_forever":1452,"playtime_windows_forever":0,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1554221474},{"appid":761830,"playtime_forever":431,"playtime_windows_forever":431,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1618169771},{"appid":774171,"playtime_forever":31,"playtime_windows_forever":31,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1625662563},{"appid":911220,"playtime_forever":0,"playtime_windows_forever":0,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":0},{"appid":945360,"playtime_forever":277,"playtime_windows_forever":277,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1627407079},{"appid":1091500,"playtime_forever":1905,"playtime_windows_forever":1905,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1652435909},{"appid":1097150,"playtime_forever":69,"playtime_windows_forever":69,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1657386045},{"appid":1109570,"playtime_forever":546,"playtime_windows_forever":546,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1642865166},{"appid":1222670,"playtime_forever":0,"playtime_windows_forever":0,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":0},{"appid":1222700,"playtime_forever":14,"playtime_windows_forever":14,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1646240393},{"appid":1279610,"playtime_forever":5,"playtime_windows_forever":5,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1625903017},{"appid":1325860,"playtime_forever":96,"playtime_windows_forever":96,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1650809453},{"appid":1364390,"playtime_forever":1,"playtime_windows_forever":1,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1625836777},{"appid":843380,"playtime_forever":0,"playtime_windows_forever":0,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":0},{"appid":475550,"playtime_forever":0,"playtime_windows_forever":0,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":0}]}}'
+  recorded_at: Tue, 20 Dec 2022 09:38:02 GMT
+- request:
+    method: get
+    uri: http://api.steampowered.com/IPlayerService/GetOwnedGames/v1?key=<STEAM_KEY>&steamid=<STEAM_ID>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Eresult:
+      - '1'
+      Vary:
+      - Accept-Encoding
+      Expires:
+      - Tue, 20 Dec 2022 09:38:02 GMT
+      Date:
+      - Tue, 20 Dec 2022 09:38:02 GMT
+      Content-Length:
+      - '4984'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"response":{"game_count":33,"games":[{"appid":239030,"playtime_forever":0,"playtime_windows_forever":0,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":0},{"appid":271590,"playtime_forever":216,"playtime_windows_forever":216,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1631371775},{"appid":238320,"playtime_forever":80,"playtime_windows_forever":80,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1631979081},{"appid":381210,"playtime_forever":210,"playtime_windows_forever":206,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1623680773},{"appid":391540,"playtime_forever":0,"playtime_windows_forever":0,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":0},{"appid":400630,"playtime_forever":0,"playtime_windows_forever":0,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":0},{"appid":280790,"playtime_forever":48,"playtime_windows_forever":0,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1472401395},{"appid":414700,"playtime_forever":0,"playtime_windows_forever":0,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":0},{"appid":440880,"playtime_forever":0,"playtime_windows_forever":0,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":0},{"appid":477160,"playtime_2weeks":53,"playtime_forever":109,"playtime_windows_forever":109,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1670601781},{"appid":535930,"playtime_forever":537,"playtime_windows_forever":537,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1623917441},{"appid":597760,"playtime_forever":0,"playtime_windows_forever":0,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":0},{"appid":613100,"playtime_forever":342,"playtime_windows_forever":342,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1662907555},{"appid":424840,"playtime_forever":377,"playtime_windows_forever":377,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1622465519},{"appid":658850,"playtime_forever":0,"playtime_windows_forever":0,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":0},{"appid":665300,"playtime_forever":48,"playtime_windows_forever":48,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1628078573},{"appid":690530,"playtime_forever":146,"playtime_windows_forever":0,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1531454848},{"appid":240720,"playtime_forever":200,"playtime_windows_forever":200,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1631370335},{"appid":736190,"playtime_forever":1452,"playtime_windows_forever":0,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1554221474},{"appid":761830,"playtime_forever":431,"playtime_windows_forever":431,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1618169771},{"appid":774171,"playtime_forever":31,"playtime_windows_forever":31,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1625662563},{"appid":911220,"playtime_forever":0,"playtime_windows_forever":0,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":0},{"appid":945360,"playtime_forever":277,"playtime_windows_forever":277,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1627407079},{"appid":1091500,"playtime_forever":1905,"playtime_windows_forever":1905,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1652435909},{"appid":1097150,"playtime_forever":69,"playtime_windows_forever":69,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1657386045},{"appid":1109570,"playtime_forever":546,"playtime_windows_forever":546,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1642865166},{"appid":1222670,"playtime_forever":0,"playtime_windows_forever":0,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":0},{"appid":1222700,"playtime_forever":14,"playtime_windows_forever":14,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1646240393},{"appid":1279610,"playtime_forever":5,"playtime_windows_forever":5,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1625903017},{"appid":1325860,"playtime_forever":96,"playtime_windows_forever":96,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1650809453},{"appid":1364390,"playtime_forever":1,"playtime_windows_forever":1,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":1625836777},{"appid":843380,"playtime_forever":0,"playtime_windows_forever":0,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":0},{"appid":475550,"playtime_forever":0,"playtime_windows_forever":0,"playtime_mac_forever":0,"playtime_linux_forever":0,"rtime_last_played":0}]}}'
+  recorded_at: Tue, 20 Dec 2022 09:38:02 GMT
+- request:
+    method: get
+    uri: https://store.steampowered.com/api/appdetails?appids=1091500
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - DENY
+      Cache-Control:
+      - public,max-age=3600
+      Expires:
+      - Tue, 20 Dec 2022 10:06:25 GMT
+      Last-Modified:
+      - Tue, 20 Dec 2022 09:00:00 GMT
+      Strict-Transport-Security:
+      - max-age=300
+      Vary:
+      - Accept-Encoding
+      - origin
+      Date:
+      - Tue, 20 Dec 2022 09:38:02 GMT
+      Content-Length:
+      - '29'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"1091500":{"success":false}}'
+  recorded_at: Tue, 20 Dec 2022 09:38:02 GMT
+- request:
+    method: get
+    uri: http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v2?key=<STEAM_KEY>&steamids=76561198274628186
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      Expires:
+      - Tue, 20 Dec 2022 09:38:02 GMT
+      Date:
+      - Tue, 20 Dec 2022 09:38:02 GMT
+      Content-Length:
+      - '709'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"response":{"players":[{"steamid":"76561198274628186","communityvisibilitystate":3,"profilestate":1,"personaname":"Black
+        Parade","profileurl":"https://steamcommunity.com/profiles/76561198274628186/","avatar":"https://avatars.akamai.steamstatic.com/32a21b2941b9360c637c65ba4bf933fc9ba93374.jpg","avatarmedium":"https://avatars.akamai.steamstatic.com/32a21b2941b9360c637c65ba4bf933fc9ba93374_medium.jpg","avatarfull":"https://avatars.akamai.steamstatic.com/32a21b2941b9360c637c65ba4bf933fc9ba93374_full.jpg","avatarhash":"32a21b2941b9360c637c65ba4bf933fc9ba93374","personastate":0,"realname":"Laylay","primaryclanid":"103582791429521408","timecreated":1451895379,"personastateflags":0,"loccountrycode":"TW"}]}}'
+  recorded_at: Tue, 20 Dec 2022 09:38:02 GMT
+- request:
+    method: get
+    uri: http://api.steampowered.com/IPlayerService/GetOwnedGames/v1?key=<STEAM_KEY>&steamid=76561198274628186
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Eresult:
+      - '15'
+      Vary:
+      - Accept-Encoding
+      Expires:
+      - Tue, 20 Dec 2022 09:38:02 GMT
+      Date:
+      - Tue, 20 Dec 2022 09:38:02 GMT
+      Content-Length:
+      - '15'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"response":{}}'
+  recorded_at: Tue, 20 Dec 2022 09:38:02 GMT
+- request:
+    method: get
+    uri: http://api.steampowered.com/IPlayerService/GetOwnedGames/v1?key=<STEAM_KEY>&steamid=76561198274628186
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Eresult:
+      - '15'
+      Vary:
+      - Accept-Encoding
+      Expires:
+      - Tue, 20 Dec 2022 09:38:03 GMT
+      Date:
+      - Tue, 20 Dec 2022 09:38:03 GMT
+      Content-Length:
+      - '15'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"response":{}}'
+  recorded_at: Tue, 20 Dec 2022 09:38:03 GMT
+- request:
+    method: get
+    uri: http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v2?key=<STEAM_KEY>&steamids=76561198376062883
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      Expires:
+      - Tue, 20 Dec 2022 09:38:03 GMT
+      Date:
+      - Tue, 20 Dec 2022 09:38:03 GMT
+      Content-Length:
+      - '560'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"response":{"players":[{"steamid":"76561198376062883","communityvisibilitystate":2,"profilestate":1,"personaname":"Ariel","profileurl":"https://steamcommunity.com/id/yunshin/","avatar":"https://avatars.akamai.steamstatic.com/b9a86903dfffc3f7d7bf73f0fb6ab5a64b604b6d.jpg","avatarmedium":"https://avatars.akamai.steamstatic.com/b9a86903dfffc3f7d7bf73f0fb6ab5a64b604b6d_medium.jpg","avatarfull":"https://avatars.akamai.steamstatic.com/b9a86903dfffc3f7d7bf73f0fb6ab5a64b604b6d_full.jpg","avatarhash":"b9a86903dfffc3f7d7bf73f0fb6ab5a64b604b6d","personastate":0}]}}'
+  recorded_at: Tue, 20 Dec 2022 09:38:03 GMT
+- request:
+    method: get
+    uri: http://api.steampowered.com/IPlayerService/GetOwnedGames/v1?key=<STEAM_KEY>&steamid=76561198376062883
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Eresult:
+      - '15'
+      Vary:
+      - Accept-Encoding
+      Expires:
+      - Tue, 20 Dec 2022 09:38:03 GMT
+      Date:
+      - Tue, 20 Dec 2022 09:38:03 GMT
+      Content-Length:
+      - '15'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"response":{}}'
+  recorded_at: Tue, 20 Dec 2022 09:38:03 GMT
+- request:
+    method: get
+    uri: http://api.steampowered.com/IPlayerService/GetOwnedGames/v1?key=<STEAM_KEY>&steamid=76561198376062883
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Eresult:
+      - '15'
+      Vary:
+      - Accept-Encoding
+      Expires:
+      - Tue, 20 Dec 2022 09:38:03 GMT
+      Date:
+      - Tue, 20 Dec 2022 09:38:03 GMT
+      Content-Length:
+      - '15'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"response":{}}'
+  recorded_at: Tue, 20 Dec 2022 09:38:03 GMT
+- request:
+    method: get
+    uri: http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v2?key=<STEAM_KEY>&steamids=76561198383470383
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      Expires:
+      - Tue, 20 Dec 2022 09:38:03 GMT
+      Date:
+      - Tue, 20 Dec 2022 09:38:03 GMT
+      Content-Length:
+      - '666'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"response":{"players":[{"steamid":"76561198383470383","communityvisibilitystate":3,"profilestate":1,"personaname":"a0985418957","profileurl":"https://steamcommunity.com/profiles/76561198383470383/","avatar":"https://avatars.akamai.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb.jpg","avatarmedium":"https://avatars.akamai.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_medium.jpg","avatarfull":"https://avatars.akamai.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg","avatarhash":"fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb","personastate":1,"primaryclanid":"103582791429521408","timecreated":1493173225,"personastateflags":0}]}}'
+  recorded_at: Tue, 20 Dec 2022 09:38:03 GMT
+- request:
+    method: get
+    uri: http://api.steampowered.com/IPlayerService/GetOwnedGames/v1?key=<STEAM_KEY>&steamid=76561198383470383
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Eresult:
+      - '15'
+      Vary:
+      - Accept-Encoding
+      Expires:
+      - Tue, 20 Dec 2022 09:38:04 GMT
+      Date:
+      - Tue, 20 Dec 2022 09:38:04 GMT
+      Content-Length:
+      - '15'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"response":{}}'
+  recorded_at: Tue, 20 Dec 2022 09:38:04 GMT
+- request:
+    method: get
+    uri: http://api.steampowered.com/IPlayerService/GetOwnedGames/v1?key=<STEAM_KEY>&steamid=76561198383470383
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Eresult:
+      - '15'
+      Vary:
+      - Accept-Encoding
+      Expires:
+      - Tue, 20 Dec 2022 09:38:04 GMT
+      Date:
+      - Tue, 20 Dec 2022 09:38:04 GMT
+      Content-Length:
+      - '15'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"response":{}}'
+  recorded_at: Tue, 20 Dec 2022 09:38:04 GMT
+- request:
+    method: get
+    uri: http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v2?key=<STEAM_KEY>&steamids=76561199180185538
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      Expires:
+      - Tue, 20 Dec 2022 09:38:04 GMT
+      Date:
+      - Tue, 20 Dec 2022 09:38:04 GMT
+      Content-Length:
+      - '658'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"response":{"players":[{"steamid":"76561199180185538","communityvisibilitystate":3,"profilestate":1,"personaname":"Joy","profileurl":"https://steamcommunity.com/profiles/76561199180185538/","avatar":"https://avatars.akamai.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb.jpg","avatarmedium":"https://avatars.akamai.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_medium.jpg","avatarfull":"https://avatars.akamai.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg","avatarhash":"fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb","personastate":0,"primaryclanid":"103582791429521408","timecreated":1623586912,"personastateflags":0}]}}'
+  recorded_at: Tue, 20 Dec 2022 09:38:04 GMT
+- request:
+    method: get
+    uri: http://api.steampowered.com/IPlayerService/GetOwnedGames/v1?key=<STEAM_KEY>&steamid=76561199180185538
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Eresult:
+      - '15'
+      Vary:
+      - Accept-Encoding
+      Expires:
+      - Tue, 20 Dec 2022 09:38:04 GMT
+      Date:
+      - Tue, 20 Dec 2022 09:38:04 GMT
+      Content-Length:
+      - '15'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"response":{}}'
+  recorded_at: Tue, 20 Dec 2022 09:38:04 GMT
+- request:
+    method: get
+    uri: http://api.steampowered.com/IPlayerService/GetOwnedGames/v1?key=<STEAM_KEY>&steamid=76561199180185538
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Eresult:
+      - '15'
+      Vary:
+      - Accept-Encoding
+      Expires:
+      - Tue, 20 Dec 2022 09:38:04 GMT
+      Date:
+      - Tue, 20 Dec 2022 09:38:04 GMT
+      Content-Length:
+      - '15'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"response":{}}'
+  recorded_at: Tue, 20 Dec 2022 09:38:04 GMT
+- request:
+    method: get
+    uri: http://api.steampowered.com/ISteamUser/GetFriendList/v1?key=<STEAM_KEY>&steamid=wefsvsvva
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Server:
+      - nginx
+      Content-Type:
+      - text/html; charset=UTF-8
+      Content-Length:
+      - '160'
+      Expires:
+      - Tue, 20 Dec 2022 10:10:00 GMT
+      Cache-Control:
+      - max-age=0, no-cache, no-store
+      Pragma:
+      - no-cache
+      Date:
+      - Tue, 20 Dec 2022 10:10:00 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: "<html><head><title>Internal Server Error</title></head><body><h1>Internal
+        Server Error</h1>Unknown problem determining WebApi request destination.</body></html>"
+  recorded_at: Tue, 20 Dec 2022 10:10:00 GMT
+recorded_with: VCR 6.1.0

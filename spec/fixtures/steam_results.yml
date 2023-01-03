@@ -1,0 +1,217 @@
+---
+friends:
+- steamid: '76561198274628186'
+  relationship: friend
+  friend_since: 1627222081
+- steamid: '76561198376062883'
+  relationship: friend
+  friend_since: 1625925174
+- steamid: '76561198383470383'
+  relationship: friend
+  friend_since: 1646406466
+- steamid: '76561199180185538'
+  relationship: friend
+  friend_since: 1623665393
+owned:
+  response:
+    game_count: 33
+    games:
+    - appid: 239030
+      playtime_forever: 0
+      playtime_windows_forever: 0
+      playtime_mac_forever: 0
+      playtime_linux_forever: 0
+      rtime_last_played: 0
+    - appid: 271590
+      playtime_forever: 216
+      playtime_windows_forever: 216
+      playtime_mac_forever: 0
+      playtime_linux_forever: 0
+      rtime_last_played: 1631371775
+    - appid: 238320
+      playtime_forever: 80
+      playtime_windows_forever: 80
+      playtime_mac_forever: 0
+      playtime_linux_forever: 0
+      rtime_last_played: 1631979081
+    - appid: 381210
+      playtime_forever: 210
+      playtime_windows_forever: 206
+      playtime_mac_forever: 0
+      playtime_linux_forever: 0
+      rtime_last_played: 1623680773
+    - appid: 391540
+      playtime_forever: 0
+      playtime_windows_forever: 0
+      playtime_mac_forever: 0
+      playtime_linux_forever: 0
+      rtime_last_played: 0
+    - appid: 400630
+      playtime_forever: 0
+      playtime_windows_forever: 0
+      playtime_mac_forever: 0
+      playtime_linux_forever: 0
+      rtime_last_played: 0
+    - appid: 280790
+      playtime_forever: 48
+      playtime_windows_forever: 0
+      playtime_mac_forever: 0
+      playtime_linux_forever: 0
+      rtime_last_played: 1472401395
+    - appid: 414700
+      playtime_forever: 0
+      playtime_windows_forever: 0
+      playtime_mac_forever: 0
+      playtime_linux_forever: 0
+      rtime_last_played: 0
+    - appid: 440880
+      playtime_forever: 0
+      playtime_windows_forever: 0
+      playtime_mac_forever: 0
+      playtime_linux_forever: 0
+      rtime_last_played: 0
+    - appid: 477160
+      playtime_2weeks: 53
+      playtime_forever: 109
+      playtime_windows_forever: 109
+      playtime_mac_forever: 0
+      playtime_linux_forever: 0
+      rtime_last_played: 1670601781
+    - appid: 535930
+      playtime_forever: 537
+      playtime_windows_forever: 537
+      playtime_mac_forever: 0
+      playtime_linux_forever: 0
+      rtime_last_played: 1623917441
+    - appid: 597760
+      playtime_forever: 0
+      playtime_windows_forever: 0
+      playtime_mac_forever: 0
+      playtime_linux_forever: 0
+      rtime_last_played: 0
+    - appid: 613100
+      playtime_forever: 342
+      playtime_windows_forever: 342
+      playtime_mac_forever: 0
+      playtime_linux_forever: 0
+      rtime_last_played: 1662907555
+    - appid: 424840
+      playtime_forever: 377
+      playtime_windows_forever: 377
+      playtime_mac_forever: 0
+      playtime_linux_forever: 0
+      rtime_last_played: 1622465519
+    - appid: 658850
+      playtime_forever: 0
+      playtime_windows_forever: 0
+      playtime_mac_forever: 0
+      playtime_linux_forever: 0
+      rtime_last_played: 0
+    - appid: 665300
+      playtime_forever: 48
+      playtime_windows_forever: 48
+      playtime_mac_forever: 0
+      playtime_linux_forever: 0
+      rtime_last_played: 1628078573
+    - appid: 690530
+      playtime_forever: 146
+      playtime_windows_forever: 0
+      playtime_mac_forever: 0
+      playtime_linux_forever: 0
+      rtime_last_played: 1531454848
+    - appid: 240720
+      playtime_forever: 200
+      playtime_windows_forever: 200
+      playtime_mac_forever: 0
+      playtime_linux_forever: 0
+      rtime_last_played: 1631370335
+    - appid: 736190
+      playtime_forever: 1452
+      playtime_windows_forever: 0
+      playtime_mac_forever: 0
+      playtime_linux_forever: 0
+      rtime_last_played: 1554221474
+    - appid: 761830
+      playtime_forever: 431
+      playtime_windows_forever: 431
+      playtime_mac_forever: 0
+      playtime_linux_forever: 0
+      rtime_last_played: 1618169771
+    - appid: 774171
+      playtime_forever: 31
+      playtime_windows_forever: 31
+      playtime_mac_forever: 0
+      playtime_linux_forever: 0
+      rtime_last_played: 1625662563
+    - appid: 911220
+      playtime_forever: 0
+      playtime_windows_forever: 0
+      playtime_mac_forever: 0
+      playtime_linux_forever: 0
+      rtime_last_played: 0
+    - appid: 945360
+      playtime_forever: 277
+      playtime_windows_forever: 277
+      playtime_mac_forever: 0
+      playtime_linux_forever: 0
+      rtime_last_played: 1627407079
+    - appid: 1091500
+      playtime_forever: 1905
+      playtime_windows_forever: 1905
+      playtime_mac_forever: 0
+      playtime_linux_forever: 0
+      rtime_last_played: 1652435909
+    - appid: 1097150
+      playtime_forever: 69
+      playtime_windows_forever: 69
+      playtime_mac_forever: 0
+      playtime_linux_forever: 0
+      rtime_last_played: 1657386045
+    - appid: 1109570
+      playtime_forever: 546
+      playtime_windows_forever: 546
+      playtime_mac_forever: 0
+      playtime_linux_forever: 0
+      rtime_last_played: 1642865166
+    - appid: 1222670
+      playtime_forever: 0
+      playtime_windows_forever: 0
+      playtime_mac_forever: 0
+      playtime_linux_forever: 0
+      rtime_last_played: 0
+    - appid: 1222700
+      playtime_forever: 14
+      playtime_windows_forever: 14
+      playtime_mac_forever: 0
+      playtime_linux_forever: 0
+      rtime_last_played: 1646240393
+    - appid: 1279610
+      playtime_forever: 5
+      playtime_windows_forever: 5
+      playtime_mac_forever: 0
+      playtime_linux_forever: 0
+      rtime_last_played: 1625903017
+    - appid: 1325860
+      playtime_forever: 96
+      playtime_windows_forever: 96
+      playtime_mac_forever: 0
+      playtime_linux_forever: 0
+      rtime_last_played: 1650809453
+    - appid: 1364390
+      playtime_forever: 1
+      playtime_windows_forever: 1
+      playtime_mac_forever: 0
+      playtime_linux_forever: 0
+      rtime_last_played: 1625836777
+    - appid: 843380
+      playtime_forever: 0
+      playtime_windows_forever: 0
+      playtime_mac_forever: 0
+      playtime_linux_forever: 0
+      rtime_last_played: 0
+    - appid: 475550
+      playtime_forever: 0
+      playtime_windows_forever: 0
+      playtime_mac_forever: 0
+      playtime_linux_forever: 0
+      rtime_last_played: 0

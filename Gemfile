@@ -21,7 +21,7 @@ gem 'roda', '~> 3'
 gem 'httparty'
 
 ## Database
-gem 'hirb', '~> 0.7.3'
+gem 'hirb', '~> 0'
 gem 'sequel', '~> 5.49'
 
 # Controllers and services
@@ -46,10 +46,9 @@ group :test do
   gem 'minitest', '~> 5'
   gem 'minitest-rg', '~> 5'
 
-  gem 'page-object', '~> 2.3'
   gem 'simplecov', '~> 0'
-  gem 'vcr', '~> 6'
-  gem 'webmock', '~> 3'
+  gem 'vcr', '~> 6.0'
+  gem 'webmock', '~> 3.0'
 end
 
 group :development do
@@ -70,8 +69,6 @@ end
 group :production do
   gem 'pg'
 end
-
-gem 'rack', '~> 3.0'
 
 gem 'debug', '~> 1.7'
 

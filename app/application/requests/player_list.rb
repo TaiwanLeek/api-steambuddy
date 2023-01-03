@@ -6,6 +6,7 @@ require 'json'
 
 module SteamBuddy
   module Request
+    # Prlayer list request parser
     class EncodedPlayersList
       include Dry::Monads::Result::Mixin
 
@@ -13,9 +14,10 @@ module SteamBuddy
         @params = params
       end
 
+      # Use in API to parse incoming list requests
       def call
         Success(
-          Json.parse(decode(@params['list']))
+          JSON.parse(decode(@params['list']))
         )
       rescue StandardError
         Failure(
@@ -26,12 +28,20 @@ module SteamBuddy
         )
       end
 
+      # Decode params
       def decode(param)
         Base64.urlsafe_decode64(param)
       end
 
+      # Client App will encode params to send as a string
+      # - Use this method to create encoded params for testing
       def self.to_encoded(list)
         Base64.urlsafe_encode64(list.to_json)
+      end
+
+      # Use in tests to create a PlayerList object from a list
+      def self.to_request(list)
+        EncodedProjectList.new('list' => to_encoded(list))
       end
     end
   end
