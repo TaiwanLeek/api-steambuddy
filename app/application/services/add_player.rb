@@ -14,21 +14,26 @@ module SteamBuddy
       private
 
       DB_ERR_MSG = 'Having trouble accessing the database'
+      LOADING_MSG = 'Loading the player info'
 
       # Expects input[:remote_id]
-      def find_player(input)
+      def find_player(input) # rubocop:disable Metrics/MethodLength
         player = player_from_database(input)
         if player&.full_friend_data
           input[:local_player] = player
+          Success(input)
         else
-          input[:remote_player] = player_from_steam(input)
+          Messaging::Queue
+            .new(App.config.CLONE_QUEUE_URL, App.config)
+            .send(input[:remote_id].to_json)
+
+          Failure(Response::ApiResult.new(status: :processing, message: LOADING_MSG))
         end
-        Success(input)
       rescue StandardError => e
         Failure(Response::ApiResult.new(status: :not_found, message: e.to_s))
       end
 
-      def store_player(input)
+      def store_player(input) # rubocop:disable Metrics/MethodLength
         player =
           if (new_player = input[:remote_player])
             db_player = Repository::For.entity(new_player).find_or_create_with_friends(new_player)

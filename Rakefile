@@ -112,3 +112,22 @@ namespace :quality do
     sh "flog #{CODE}"
   end
 end
+
+namespace :worker do
+  namespace :run do
+    desc 'Run the background cloning worker in development mode'
+    task dev: :config do
+      sh 'RACK_ENV=development bundle exec shoryuken -r ./workers/fetch_player_worker.rb -C ./workers/shoryuken_dev.yml'
+    end
+
+    desc 'Run the background cloning worker in testing mode'
+    task test: :config do
+      sh 'RACK_ENV=test bundle exec shoryuken -r ./workers/fetch_player_worker.rb -C ./workers/shoryuken_test.yml'
+    end
+
+    desc 'Run the background cloning worker in production mode'
+    task production: :config do
+      sh 'RACK_ENV=production bundle exec shoryuken -r ./workers/fetch_player_worker.rb -C ./workers/shoryuken.yml'
+    end
+  end
+end
