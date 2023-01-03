@@ -7,7 +7,7 @@ module SteamBuddy
     ).freeze
 
     FAILURE = Set.new(
-      %i[forbidden not_found bad_request conflict cannot_process internal_error]
+      %i[forbidden not_found bad_request conflict cannot_process internal_error processing]
     ).freeze
 
     CODES = SUCCESS | FAILURE

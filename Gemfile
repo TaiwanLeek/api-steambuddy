@@ -78,3 +78,5 @@ gem 'concurrent-ruby', '~> 1.1'
 gem 'shoryuken', '~> 5.3'
 
 gem 'benchmark', '~> 0.2.1'
+
+gem "nokogiri", "~> 1.13"
