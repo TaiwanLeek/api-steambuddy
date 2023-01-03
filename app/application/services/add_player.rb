@@ -17,7 +17,7 @@ module SteamBuddy
       LOADING_MSG = 'Loading the player info'
 
       # Expects input[:remote_id]
-      def find_player(input)
+      def find_player(input) # rubocop:disable Metrics/MethodLength
         player = player_from_database(input)
         if player&.full_friend_data
           input[:local_player] = player
@@ -33,7 +33,7 @@ module SteamBuddy
         Failure(Response::ApiResult.new(status: :not_found, message: e.to_s))
       end
 
-      def store_player(input)
+      def store_player(input) # rubocop:disable Metrics/MethodLength
         player =
           if (new_player = input[:remote_player])
             db_player = Repository::For.entity(new_player).find_or_create_with_friends(new_player)

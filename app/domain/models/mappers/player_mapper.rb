@@ -12,6 +12,7 @@ module SteamBuddy
 
       def find(remote_id)
         friend_list_data = @gateway.friend_list_data(remote_id)
+
         DataMapper.new(remote_id, @key, @gateway_class, friend_list_data).build_entity_with_friends
       end
 
