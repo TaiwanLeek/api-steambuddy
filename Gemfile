@@ -72,6 +72,9 @@ end
 
 gem 'debug', '~> 1.7'
 
+# Asynchronicity
+gem 'aws-sdk-sqs', '~> 1.48'
 gem 'concurrent-ruby', '~> 1.1'
+gem 'shoryuken', '~> 5.3'
 
 gem 'benchmark', '~> 0.2.1'
