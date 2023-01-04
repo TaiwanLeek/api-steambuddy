@@ -32,6 +32,7 @@ module SteamBuddy
             username:,
             game_count:,
             full_friend_data: true,
+            total_play_time:,
             owned_games:,
             friend_list:
           )
@@ -43,6 +44,7 @@ module SteamBuddy
             username:,
             game_count:,
             full_friend_data: false,
+            total_play_time:,
             owned_games:,
             friend_list: nil
           )
@@ -54,6 +56,10 @@ module SteamBuddy
 
         def owned_games
           @owned_game_mapper.find_games(@remote_id)
+        end
+
+        def total_play_time
+          @owned_game_mapper.find_total_play_time(@remote_id)
         end
 
         def username
@@ -81,7 +87,7 @@ module SteamBuddy
         def self.sorting_way(friend_a, friend_b, info_value)
           case info_value
           when 'played_time'
-            friend_b.total_played_time <=> friend_a.total_played_time
+            friend_b.total_play_time <=> friend_a.total_play_time
           when 'favorite_game'
             favorite_game_case(friend_a&.favorite_game&.played_time,
                                friend_b&.favorite_game&.played_time)

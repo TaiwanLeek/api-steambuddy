@@ -30,6 +30,7 @@ class FetchPlayerWorker
     new_player = SteamBuddy::Steam::PlayerMapper
                  .new(SteamBuddy::App.config.STEAM_KEY)
                  .find(JSON.parse(request))
+
     db_player = SteamBuddy::Repository::For.entity(new_player).find_or_create_with_friends(new_player)
     SteamBuddy::Repository::Players.rebuild_entity_with_friends(db_player)
   rescue StandardError => e

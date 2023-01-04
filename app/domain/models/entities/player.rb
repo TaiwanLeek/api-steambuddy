@@ -17,13 +17,10 @@ module SteamBuddy
       attribute :full_friend_data, Strict::Bool
       attribute :owned_games, Array.of(OwnedGame).optional
       attribute :friend_list, Array.of(Player).optional
+      attribute :total_play_time, Strict::Integer.optional
 
       def to_attr_hash
         to_hash.except(:owned_games, :friend_list)
-      end
-
-      def total_played_time
-        owned_games ? owned_games.sum(&:played_time) : 0
       end
 
       def favorite_game

@@ -18,6 +18,17 @@ module SteamBuddy
         game_count || 0
       end
 
+      def find_total_play_time(remote_id)
+        games = @gateway.owned_games_data(remote_id)['games']
+        return 0 unless games
+
+        total_play_time = 0
+        games.each do |game|
+          total_play_time += game['playtime_forever'].to_i
+        end
+        total_play_time / MINUTES_IN_AN_HOUR
+      end
+
       def find_games(remote_id)
         owned_games_data = @gateway.owned_games_data(remote_id)
         game_list_data = owned_games_data['games']
