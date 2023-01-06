@@ -17,15 +17,16 @@ module SteamBuddy
       LOADING_MSG = 'Loading the player info'
 
       # Expects input[:remote_id]
-      def find_player(input) # rubocop:disable Metrics/MethodLength
+      def find_player(input)
         player = player_from_database(input)
         if player&.full_friend_data
           input[:local_player] = player
           Success(input)
         else
-          Messaging::Queue
-            .new(App.config.CLONE_QUEUE_URL, App.config)
-            .send(input[:remote_id].to_json)
+          notify_clone_workers(input)
+          # Messaging::Queue
+          #  .new(App.config.CLONE_QUEUE_URL, App.config)
+          #  .send(input[:remote_id].to_json)
 
           Failure(Response::ApiResult.new(status: :processing, message: LOADING_MSG))
         end
@@ -61,6 +62,23 @@ module SteamBuddy
       def player_from_database(input)
         Repository::For.klass(Entity::Player).find_id(input[:remote_id])
       end
+
+      def notify_clone_workers(input)
+        # queues = [App.config.CLONE_QUEUE_URL, App.config.REPORT_QUEUE_URL]
+        queues = [App.config.CLONE_QUEUE_URL]
+
+        queues.each do |queue_url|
+          Concurrent::Promise.execute do
+            Messaging::Queue
+              .new(queue_url, App.config)
+              .send(input[:remote_id].to_json)
+          end
+        end
+      end
+
+      # Messaging::Queue
+      #  .new(App.config.CLONE_QUEUE_URL, App.config)
+      #  .send(input[:remote_id].to_json)
     end
   end
 end
