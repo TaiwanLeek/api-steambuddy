@@ -24,7 +24,7 @@ class FetchPlayerWorker
   )
 
   include Shoryuken::Worker
-  shoryuken_options queue: config.CLONE_QUEUE_URL, auto_delete: true
+  shoryuken_options queue: config.FETCH_QUEUE_URL, auto_delete: true
 
   def perform(_sqs_msg, request)
     new_player = SteamBuddy::Steam::PlayerMapper

@@ -8,7 +8,7 @@ module SteamBuddy
     plugin :halt
     plugin :all_verbs
 
-    route do |routing|
+    route do |routing| # rubocop:disable Metrics/BlockLength
       response['Content-Type'] = 'application/json'
 
       # GET /
@@ -23,8 +23,8 @@ module SteamBuddy
         result_response.to_json
       end
 
-      routing.on 'api/v1' do
-        routing.on 'players' do
+      routing.on 'api/v1' do # rubocop:disable Metrics/BlockLength
+        routing.on 'players' do # rubocop:disable Metrics/BlockLength
           routing.on String do |remote_id|
             # GET /players/{remote_id}/
             routing.get do

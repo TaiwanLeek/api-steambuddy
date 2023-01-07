@@ -25,7 +25,7 @@ module SteamBuddy
         else
           notify_clone_workers(input)
           # Messaging::Queue
-          #  .new(App.config.CLONE_QUEUE_URL, App.config)
+          #  .new(App.config.FETCH_QUEUE_URL, App.config)
           #  .send(input[:remote_id].to_json)
 
           Failure(Response::ApiResult.new(status: :processing, message: LOADING_MSG))
@@ -64,8 +64,8 @@ module SteamBuddy
       end
 
       def notify_clone_workers(input)
-        # queues = [App.config.CLONE_QUEUE_URL, App.config.REPORT_QUEUE_URL]
-        queues = [App.config.CLONE_QUEUE_URL]
+        # queues = [App.config.FETCH_QUEUE_URL, App.config.REPORT_QUEUE_URL]
+        queues = [App.config.FETCH_QUEUE_URL]
 
         queues.each do |queue_url|
           Concurrent::Promise.execute do
@@ -77,7 +77,7 @@ module SteamBuddy
       end
 
       # Messaging::Queue
-      #  .new(App.config.CLONE_QUEUE_URL, App.config)
+      #  .new(App.config.FETCH_QUEUE_URL, App.config)
       #  .send(input[:remote_id].to_json)
     end
   end
