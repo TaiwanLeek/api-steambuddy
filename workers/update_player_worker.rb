@@ -27,7 +27,12 @@ class UpdatePlayerWorker
   shoryuken_options queue: config.UPDATE_QUEUE_URL, auto_delete: true
 
   def perform(_sqs_msg, request)
-    Repository::Players.all.each { |player| notify_clone_workers(player.remote_id) }
+    total_player_count = SteamBuddy::Repository::Players.all.count
+    puts "Total #{total_player_count} players"
+    SteamBuddy::Repository::Players.all.each do |player| 
+      notify_clone_workers(player.remote_id)
+      #puts "Update #{player.remote_id}"
+    end
   rescue StandardError => e
     puts 'Perform error!'
     puts e.to_s
@@ -36,12 +41,12 @@ class UpdatePlayerWorker
 
   def notify_clone_workers(input)
     # queues = [App.config.FETCH_QUEUE_URL, App.config.REPORT_QUEUE_URL]
-    queues = [App.config.UPDATE_QUEUE_URL]
+    queues = [SteamBuddy::App.config.FETCH_QUEUE_URL]
 
     queues.each do |queue_url|
       Concurrent::Promise.execute do
-        Messaging::Queue
-          .new(queue_url, App.config)
+        SteamBuddy::Messaging::Queue
+          .new(queue_url, SteamBuddy::App.config)
           .send(input.to_json)
       end
     end
