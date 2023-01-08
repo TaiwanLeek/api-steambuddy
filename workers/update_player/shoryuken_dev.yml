@@ -1,0 +1,2 @@
+queues:
+  - https://sqs.ap-northeast-1.amazonaws.com/861655174246/steambuddy_update_players
